@@ -53,7 +53,6 @@ Suggested screenshots:
 
 Example:
 
-```text
 [Application Screenshot]
 💻 Requirements
 

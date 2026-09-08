@@ -2,7 +2,9 @@
 
 A simple and clean native macOS application for downloading YouTube videos and audio.
 
-YT Downloader provides an easy-to-use graphical interface for downloading individual YouTube videos or entire playlists without requiring users to work directly with command-line tools.
+YT Downloader provides an easy-to-use graphical interface for downloading individual YouTube videos or playlists without requiring users to work directly with command-line tools.
+
+The application is built using Swift and SwiftUI and is designed specifically for macOS.
 
 ---
 
@@ -10,18 +12,26 @@ YT Downloader provides an easy-to-use graphical interface for downloading indivi
 
 - 🎥 Download YouTube videos
 - 🎵 Download audio
-- 📋 Download individual videos
-- 📚 Download playlists
+- 📹 Download a single video
+- 📚 Download YouTube playlists
 - 🎚️ Select video quality
+- 🏆 Best Available quality option
 - 📝 Download available subtitles
-- 🌐 Select subtitle language
-- 📌 Embed subtitles into videos
-- 📁 Choose a custom download location
-- 💾 Default download location set to the Downloads folder
-- 📊 Display download progress and information
-- 🖥️ Native macOS interface
-- 🌙 Designed for macOS
-- ⚡ Simple and minimal user interface
+- 🌐 English subtitle support
+- 🤖 English auto-generated subtitle support
+- 🌍 All subtitles option
+- 🚫 No subtitles option
+- 🎬 Embed subtitles into downloaded videos
+- 📁 Choose a custom save location
+- 📂 Downloads are saved to the Downloads folder by default
+- 📊 Display download progress
+- 🚀 Display download speed
+- ⏱️ Display estimated time remaining (ETA)
+- 📋 Display playlist progress such as `7 / 9`
+- 🎞️ Show the currently downloading video
+- ❌ Cancel an active download
+- 🖥️ Native macOS user interface
+- 📜 Fully scrollable interface for comfortable use on different window sizes
 
 ---
 
@@ -29,61 +39,49 @@ YT Downloader provides an easy-to-use graphical interface for downloading indivi
 
 Screenshots of the application will be added here.
 
+Future versions of this section may include:
+
+- Main application window
+- Video download
+- Playlist download
+- Download progress
+- Subtitle selection
+- Completed download
+
 ---
 
 # 💻 Requirements
 
-To run the application from source, you need:
+To build and run YT Downloader from source, you need:
 
 - A Mac
 - macOS
 - Xcode
 - Internet connection
 
-For development/building:
-
-- Xcode 15 or later is recommended
-- A Mac capable of running the required macOS version
+Xcode is required if you want to build the application from source code.
 
 ---
 
 # 📥 Installation
 
-There are two ways to use YT Downloader.
+There are currently two ways to use YT Downloader.
 
-## Method 1 — Download a Pre-built Release
+### Method 1 — Build From Source
 
-If a pre-built version is available, this is the easiest way to install the application.
+Build the application yourself using Xcode.
 
-### Step 1 — Open Releases
+### Method 2 — Pre-built Release
 
-Go to the **Releases** section of this GitHub repository.
+A pre-built version may be provided through the GitHub Releases section in the future.
 
-Download the latest `.dmg` or `.zip` release.
-
-### Step 2 — Install
-
-If you downloaded a `.dmg`:
-
-1. Open the `.dmg` file.
-2. Drag **YT Downloader** into the `Applications` folder.
-3. Open the `Applications` folder.
-4. Launch **YT Downloader**.
-
-If you downloaded a `.zip`:
-
-1. Double-click the `.zip` file.
-2. Open the extracted folder.
-3. Move **YT Downloader.app** to the `Applications` folder.
-4. Launch the application.
-
-> Pre-built releases will be provided in the GitHub Releases section when available.
+> Pre-built releases will be added when available.
 
 ---
 
 # 🛠️ Build From Source
 
-If you are a developer or want to inspect/build the project yourself, you can build it directly using Xcode.
+If you want to build YT Downloader yourself, follow these steps.
 
 ## 1. Clone the Repository
 

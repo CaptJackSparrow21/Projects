@@ -2,7 +2,7 @@
 
 A simple and clean native macOS application for downloading YouTube videos and audio.
 
-YT Downloader provides an easy-to-use graphical interface for downloading individual YouTube videos or playlists without requiring users to work directly with command-line tools.
+YT Downloader provides an easy-to-use graphical interface for downloading individual YouTube videos or YouTube playlists without requiring users to work directly with command-line tools.
 
 The application is built using Swift and SwiftUI and is designed specifically for macOS.
 
@@ -20,7 +20,7 @@ The application is built using Swift and SwiftUI and is designed specifically fo
 - 🌐 English subtitle support
 - 🤖 English auto-generated subtitle support
 - 🌍 All subtitles option
-- 🚫 No Subtitles option
+- 🚫 No subtitles option
 - 🎬 Embed subtitles into downloaded videos
 - 📁 Choose a custom save location
 - 📂 Downloads are saved to the Downloads folder by default
@@ -31,8 +31,8 @@ The application is built using Swift and SwiftUI and is designed specifically fo
 - 🎞️ Show the currently downloading video
 - ❌ Cancel an active download
 - 🖥️ Native macOS user interface
-- 📜 Fully scrollable interface for comfortable use on different window sizes
-- 📂 Automatically organize playlist downloads using the playlist name
+- 📜 Fully scrollable interface
+- 🧹 Clean and simple graphical interface
 
 ---
 
@@ -40,724 +40,644 @@ The application is built using Swift and SwiftUI and is designed specifically fo
 
 Screenshots of the application can be added here.
 
-Suggested screenshots:
+Example:
+
+![YT Downloader](screenshots/main-window.png)
+
+More screenshots can be added in the future, such as:
 
 - Main application window
 - Video download
 - Audio download
 - Playlist download
-- Subtitle selection
 - Download progress
-- Playlist progress
+- Subtitle selection
 - Completed download
 
-Example:
+---
 
-[Application Screenshot]
-💻 Requirements
+# 💻 Requirements
 
-To build and run YT Downloader from source, you need:
+To use YT Downloader, you need:
 
-A Mac
-macOS
-Xcode
-Internet connection
+- A Mac
+- macOS
+- An active internet connection
 
-Xcode is required if you want to build the application from source code.
+To build YT Downloader from source code, you additionally need:
 
-📥 Installation
+- Xcode
+- Swift
+- SwiftUI
 
-There are currently two ways to use YT Downloader.
+The application is designed specifically for macOS.
 
-Method 1 — Build From Source
+---
 
-You can build the application yourself using Xcode.
+# 📥 Installation
+
+There are currently two possible ways to use YT Downloader.
+
+## Method 1 — Build From Source
+
+You can download the source code from this repository and build the application yourself using Xcode.
 
 This is currently the recommended method if you want to use the latest version of the source code.
 
-Method 2 — Pre-built Release
+## Method 2 — Pre-built Application
 
-A pre-built version may be provided through the GitHub Releases section in the future.
+A pre-built `.app` or `.dmg` release may be provided through the GitHub Releases section in the future.
 
-Pre-built releases will be added when available.
+Once a release is available, users will be able to download the application without opening Xcode.
 
-🛠️ Build From Source
+> Pre-built releases are not currently available.
 
-If you want to modify or build YT Downloader yourself, follow these steps.
+---
 
-1. Clone the Repository
+# 🛠️ Build From Source
+
+If you want to build YT Downloader yourself, follow these steps.
+
+## 1. Clone the Repository
 
 Open Terminal and run:
 
+```bash
 git clone https://github.com/CaptJackSparrow21/Projects.git
-2. Go to the Project Directory
+```
 
-The YT Downloader project is located inside:
+Then enter the project directory:
 
-Projects/
-└── Just for Fun/
-    └── YT Downloader/
+```bash
+cd "Projects/Just for Fun/YT Downloader"
+```
 
-Run:
+---
 
-cd Projects/"Just for Fun"/"YT Downloader"
-3. Open the Xcode Project
+## 2. Open the Project in Xcode
 
-Open the Xcode project:
+Locate the Xcode project inside the YT Downloader folder.
 
-open "YT Downloader.xcodeproj"
+Open the project in Xcode.
 
-You can also open the .xcodeproj file manually using Finder.
+You can also open it from Terminal if the project contains an `.xcodeproj` file:
 
-4. Select the Application Target
+```bash
+open *.xcodeproj
+```
 
-Inside Xcode:
+If the project uses an `.xcworkspace` file instead, open the workspace:
 
-Select the YT Downloader project.
-Select the YT Downloader target.
-Make sure the platform is set to macOS.
-Select your Mac as the run destination.
-5. Build and Run
+```bash
+open *.xcworkspace
+```
+
+---
+
+## 3. Select the Application Target
+
+In Xcode:
+
+1. Open the YT Downloader project.
+2. Select the **YT Downloader** target.
+3. Select your Mac as the run destination.
+4. Make sure the project builds successfully.
+
+---
+
+## 4. Build and Run
 
 Press:
 
+```text
 ⌘ + R
+```
 
-or click the Run ▶ button in Xcode.
+or click the **Run ▶** button in Xcode.
 
-Xcode will build the application and launch it on your Mac.
+Xcode will build and launch the application.
 
-▶️ Using YT Downloader
+---
 
-Using YT Downloader is simple.
+# 🚀 Using YT Downloader
 
-The basic workflow is:
+Once YT Downloader is running, you can download a YouTube video or playlist using the graphical interface.
 
-YouTube URL
-     ↓
-Download Type
-     ↓
-Format
-     ↓
-Quality
-     ↓
-Subtitles
-     ↓
-Save Location
-     ↓
-Download
-Step 1: Copy a YouTube URL
+---
+
+## Step 1: Copy a YouTube URL
 
 Open YouTube and copy the URL of the video or playlist you want to download.
 
-For a video, the URL may look like:
+For example:
 
+```text
 https://www.youtube.com/watch?v=XXXXXXXXXXX
+```
 
-For a playlist, the URL may look like:
+For a playlist, copy the playlist URL provided by YouTube.
 
-https://www.youtube.com/playlist?list=XXXXXXXXXXX
-Step 2: Paste the URL
+---
 
-Open YT Downloader and paste the URL into:
+## Step 2: Paste the URL
 
+Open YT Downloader and paste the URL into the:
+
+```text
 YouTube URL
+```
 
-You can paste the URL using:
+field.
 
-⌘ + V
-Step 3: Select Download Type
+---
+
+## Step 3: Select Download Type
 
 Choose between:
 
-Single Video
+### Single Video
 
-Use this when downloading one YouTube video.
+Use this option when you want to download one YouTube video.
 
-Playlist
+### Playlist
 
-Use this when downloading a YouTube playlist.
+Use this option when you want to download a YouTube playlist.
 
-Step 4: Select Format
+---
 
-Choose:
+## Step 4: Select Format
 
-Video
+Choose between:
 
-Use this to download the video.
+### Video
 
-Audio
+Use this option when you want to download the video.
 
-Use this when you only want the audio.
+### Audio
 
-Step 5: Select Quality
+Use this option when you only want the audio.
+
+---
+
+## Step 5: Select Quality
 
 For video downloads, select the desired quality.
 
-Depending on the YouTube video, available qualities may include:
+Depending on the source video, available qualities may include:
 
-Best Available
-4K
-1080p
-720p
-480p
-Other available qualities
+- Best Available
+- 4K
+- 1080p
+- 720p
+- 480p
+- Other available qualities
 
 The available quality depends on the source video.
 
-Best Available
+If **Best Available** is selected, the application attempts to download the best available quality supported by the source.
 
-The Best Available option selects the best suitable quality available for the video, up to the supported limit.
+---
 
-Step 6: Select Subtitles
+## Step 6: Select Subtitles
 
 If subtitles are available, select the desired subtitle option.
 
-Available options include:
+The application supports available subtitle options such as:
 
-English
-English Auto-generated
-All Subtitles
-No Subtitles
+- English subtitles
+- English auto-generated subtitles
+- All available subtitles
+- No subtitles
 
-The application can download available subtitles and embed them into the video when supported.
+When subtitles are selected, the application can download the available subtitles and embed them into the downloaded video where supported.
 
-English
+---
 
-Downloads available English subtitles.
+## Step 7: Choose Save Location
 
-English Auto-generated
+By default, downloaded files are saved to:
 
-Uses YouTube's automatically generated English subtitles when available.
-
-All Subtitles
-
-Downloads all available subtitle languages.
-
-No Subtitles
-
-Does not download or embed subtitles.
-
-Step 7: Choose Save Location
-
-By default, downloads are saved to:
-
+```text
 ~/Downloads
+```
 
-You can select another folder using:
+You can choose another folder using:
 
+```text
 Choose Folder
+```
 
-Select the folder where you want your downloaded files to be stored.
+The selected folder will be used as the download destination.
 
-Step 8: Start Download
+---
 
-Click:
+## Step 8: Start Download
 
+After selecting the desired options, click:
+
+```text
 Download
+```
 
-The application will start downloading the selected content.
+The application will start processing the selected content.
 
-During the download, the application displays the current download information and progress.
+During the download, the application can display information such as:
 
-🎥 Downloading a Single Video
+- Download progress
+- Download speed
+- Estimated time remaining
+- Current video
+- Playlist progress
 
-To download a single video:
+For example:
 
-Copy the YouTube video URL.
-Paste it into the URL field.
-Select Single Video.
-Select Video or Audio.
-If downloading video, select the desired quality.
-Select your subtitle preference.
-Choose the save location.
-Click Download.
+```text
+7 / 9
+```
 
-The application will download the selected content.
+means that the application is currently processing the seventh item out of nine.
 
-🎵 Downloading Audio
+---
+
+# 🎵 Downloading Audio
 
 To download only audio:
 
-Paste the YouTube URL.
-Select Single Video or Playlist.
-Select Audio.
-Choose the available audio option.
-Select the save location.
-Click Download.
+1. Copy the YouTube video or playlist URL.
+2. Paste the URL into the **YouTube URL** field.
+3. Select **Single Video** or **Playlist**.
+4. Select **Audio**.
+5. Choose the available audio option.
+6. Select the save location.
+7. Click **Download**.
 
-The application will download the audio from the selected content.
+The application will process the selected content as an audio download.
 
-📚 Downloading a Playlist
+---
 
-To download a playlist:
+# 🎥 Downloading a Single Video
 
-Copy the YouTube playlist URL.
-Paste it into the URL field.
-Select Playlist.
-Select Video or Audio.
-Choose the desired options.
-Choose the save location.
-Click Download.
+To download a single YouTube video:
+
+1. Copy the YouTube video URL.
+2. Paste it into the **YouTube URL** field.
+3. Select **Single Video**.
+4. Select **Video**.
+5. Choose the desired quality.
+6. Select subtitle options if required.
+7. Choose the save location.
+8. Click **Download**.
+
+The application will download the selected video.
+
+---
+
+# 📚 Downloading a Playlist
+
+To download a YouTube playlist:
+
+1. Copy the YouTube playlist URL.
+2. Paste it into the **YouTube URL** field.
+3. Select **Playlist**.
+4. Select **Video** or **Audio**.
+5. Choose the desired quality or audio option.
+6. Select subtitle options if required.
+7. Choose the save location.
+8. Click **Download**.
 
 The application will process the videos contained in the playlist.
 
-📊 Playlist Progress
-
-When downloading a playlist, the application displays the current playlist progress.
+The application displays playlist progress while processing the playlist.
 
 For example:
 
+```text
 7 / 9
+```
 
-means:
+means seven of nine playlist items are being processed.
 
-7 videos
-out of
-9 total videos
+---
 
-The currently downloading video is also displayed.
+# 📝 Subtitles
 
-The progress information makes it easy to understand how much of the playlist has already been processed.
+YT Downloader supports downloading available subtitles.
 
-📂 Playlist Folder Organization
+Depending on the video, available options may include:
 
-When downloading a playlist, the application uses the playlist name for the folder rather than a generic folder name.
+### English
 
-For example:
+Downloads available English subtitles.
 
-Downloads/
-└── My YouTube Playlist/
-    ├── Video 1
-    ├── Video 2
-    ├── Video 3
-    └── ...
+### English Auto-Generated
 
-This makes it easier to identify and organize downloaded playlists.
+Downloads available automatically generated English subtitles.
 
-📝 Subtitle Handling
+### All
 
-YT Downloader supports subtitle downloading and embedding.
+Attempts to download all available subtitle languages.
 
-When subtitles are selected, the application processes the subtitle files and embeds them into the video when supported.
+### No Subtitles
 
-The goal is to keep the final download folder clean and focused on the downloaded media.
+Downloads the video without subtitles.
 
-For example, instead of having multiple separate subtitle files:
+When supported, subtitles can be embedded directly into the downloaded video.
 
-video.mp4
-video.en.vtt
-video.en-US.vtt
+Subtitle availability depends on the source video.
 
-the selected subtitles can be embedded into the video when supported.
+---
 
-📊 Download Progress
+# 📊 Download Progress
 
-While downloading, YT Downloader displays information about the current operation.
+While downloading, YT Downloader can display useful information about the current download.
 
-The application can display:
+This may include:
 
-Download progress
-Current video
-Download speed
-Estimated time remaining (ETA)
-Playlist progress
+- Current video
+- Download progress
+- Download speed
+- Estimated time remaining
+- Playlist progress
 
-For example:
-
-Downloading...
-
-7 / 9
-
-Currently downloading
-Video Title
-
-Speed
-...
-
-ETA
-...
-⏱️ ETA
-
-The application displays an estimated time remaining during supported downloads.
-
-The ETA provides an approximate indication of how much time is left for the current download operation.
-
-The actual time may change depending on:
-
-Internet speed
-Server conditions
-Video size
-Download speed
-Number of videos remaining
-🚀 Download Speed
-
-While downloading, the application displays the current download speed.
-
-The displayed speed can change during the download depending on network and server conditions.
-
-❌ Cancel Download
-
-If a download is currently running, the application provides a:
-
-Cancel
-
-button.
-
-Clicking the button cancels the active download operation.
-
-📁 Download Location
-
-The default download location is:
-
-~/Downloads
-
-You can change it using the:
-
-Choose Folder
-
-button.
-
-You can select any folder that you want to use for downloaded content.
-
-🖥️ User Interface
-
-YT Downloader is designed as a native macOS application.
-
-The main interface contains:
-
-YT Downloader
-
-YouTube URL
-────────────────────────────
-
-Download Type
-[ Single Video ] [ Playlist ]
-
-Format
-[ Video ] [ Audio ]
-
-Quality
-[ Best Available (up to 4K) ]
-
-Subtitles
-[ English ]
-
-Subtitle Information
-
-Save Location
-[ Choose Folder ]
-
-[ Download ]
-
-During a download, additional information appears below the main controls.
-
-📜 Scrollable Interface
-
-The application uses a fully scrollable interface rather than trying to fit every control and download detail into one fixed-size window.
-
-This makes it easier to access:
-
-Download controls
-Progress
-Current video
-Speed
-ETA
-Playlist progress
-Other download information
-
-Simply scroll through the application window when additional information appears below the main controls.
-
-🔧 Troubleshooting
-The Application Does Not Open
-
-If macOS displays a security warning for an unsigned application:
-
-Open System Settings.
-Go to Privacy & Security.
-Look for the security message related to YT Downloader.
-If you trust the application, allow it to open.
-
-This may happen when running a locally built or unsigned application.
-
-Download Does Not Start
-
-Check the following:
-
-Make sure the YouTube URL is correct.
-Make sure your Mac is connected to the internet.
-Try opening the URL in a browser.
-Make sure the video or playlist is accessible.
-Try another YouTube URL.
-Video Quality Is Unavailable
-
-Not every YouTube video provides every quality.
-
-For example, a particular video may not have 4K available.
-
-Try:
-
-Best Available
-
-or another available quality.
-
-The actual available quality depends on the source video.
-
-Subtitles Are Unavailable
-
-Not every YouTube video has subtitles.
-
-If subtitles are unavailable, the application may not be able to download or embed them.
-
-If subtitles are not required, select:
-
-No Subtitles
-Playlist Download Does Not Work
-
-Make sure the URL is a valid YouTube playlist URL.
-
-For example:
-
-https://www.youtube.com/playlist?list=XXXXXXXXXXX
-
-Also make sure:
-
-The playlist is accessible.
-The videos are available.
-The URL was copied correctly.
-Your Mac has an active internet connection.
-ETA or Download Information Is Not Immediately Visible
-
-The application uses a scrollable interface.
-
-If the download information appears below the main controls, simply scroll down to view:
-
-Current video
-Progress
-Speed
-ETA
-Playlist progress
-🔐 macOS Security
-
-A locally built or unsigned macOS application may trigger a Gatekeeper security warning.
-
-This can happen because the application has not been signed and notarized through Apple's distribution process.
-
-If a future release is signed and notarized, installation should be smoother.
-
-🧑‍💻 Technology
-
-YT Downloader is a native macOS application developed using Apple's development tools and Swift/SwiftUI.
-
-The project uses:
-
-Swift
-SwiftUI
-AppKit
-Xcode
-
-The application provides a graphical user interface instead of requiring users to operate the downloader through Terminal commands.
-
-🛠️ Development
-
-If you want to modify the application:
-
-Clone the repository.
-Open the YT Downloader Xcode project.
-Make your changes.
-Build and test the application.
-Commit your changes.
-Push them to GitHub.
+For playlist downloads, the current item and overall playlist progress can be displayed.
 
 Example:
 
-git clone https://github.com/CaptJackSparrow21/Projects.git
+```text
+Downloading: Video Title
 
-Then:
+Progress: 65%
 
-cd Projects/"Just for Fun"/"YT Downloader"
+Speed: 8.4 MB/s
 
-Open the project:
+ETA: 00:32
 
-open "YT Downloader.xcodeproj"
-📂 Project Structure
+Playlist: 7 / 9
+```
 
-The project is part of the larger Projects repository.
+The exact information displayed depends on the type of download and the available source information.
 
+---
+
+# ❌ Cancelling a Download
+
+An active download can be cancelled using the application's cancel control.
+
+When a download is cancelled, the application stops the active download process.
+
+For playlist downloads, cancelling the operation stops the active playlist download process.
+
+---
+
+# 📁 Download Location
+
+The default download location is:
+
+```text
+~/Downloads
+```
+
+You can change the download location using:
+
+```text
+Choose Folder
+```
+
+This allows you to save downloaded files to another folder on your Mac.
+
+---
+
+# 🖥️ User Interface
+
+YT Downloader uses a native macOS graphical interface.
+
+The application is designed so that users do not need to operate the downloader through Terminal commands.
+
+The interface includes:
+
+- YouTube URL input
+- Download type selection
+- Format selection
+- Quality selection
+- Subtitle selection
+- Save location selection
+- Download control
+- Download progress information
+- Download speed
+- ETA
+- Playlist progress
+- Cancel control
+
+The interface is fully scrollable so that all available controls and download information can be accessed comfortably on different window sizes.
+
+---
+
+# 🔧 Troubleshooting
+
+## Download Does Not Start
+
+Make sure that:
+
+- The YouTube URL is correct.
+- Your Mac has an active internet connection.
+- The video or playlist is accessible.
+- The selected save folder is accessible.
+
+Try copying the YouTube URL again and pasting it into the application.
+
+---
+
+## Video Quality Is Not Available
+
+Not every YouTube video provides the same quality options.
+
+Available qualities depend on the source video.
+
+If a particular quality is unavailable, select another available quality or use:
+
+```text
+Best Available
+```
+
+---
+
+## Subtitles Are Not Available
+
+Not every YouTube video provides subtitles.
+
+Subtitle availability depends on the source video.
+
+If subtitles are unavailable, the application may not be able to download or embed them.
+
+---
+
+## Playlist Download Does Not Work
+
+Make sure that:
+
+- The URL is a valid YouTube playlist URL.
+- The playlist is accessible.
+- Your internet connection is working.
+- The playlist contains accessible videos.
+
+Some videos inside a playlist may also be unavailable depending on their availability or restrictions.
+
+---
+
+# 🧑‍💻 Development
+
+If you want to modify or improve the application:
+
+1. Clone the repository.
+2. Open the YT Downloader Xcode project.
+3. Make your changes.
+4. Build the project.
+5. Test the application.
+6. Commit your changes.
+7. Push your changes to GitHub.
+
+Example:
+
+```bash
+git add .
+git commit -m "Update YT Downloader"
+git push
+```
+
+---
+
+# 📂 Project Structure
+
+The project is organized inside the repository as follows:
+
+```text
 Projects/
 │
 ├── Just for Fun/
 │   │
 │   └── YT Downloader/
 │       │
-│       ├── README.md
-│       ├── LICENSE
-│       │
-│       ├── YT Downloader.xcodeproj
-│       │
-│       ├── YT Downloader/
-│       │   │
-│       │   ├── ContentView.swift
-│       │   ├── DownloadManager.swift
-│       │   └── ...
-│       │
-│       └── ...
+│       ├── YT Downloader Xcode Project
+│       ├── Source Files
+│       ├── Assets
+│       └── README.md
 │
 └── ...
-🔄 Updating the Project
+```
 
-If you have already cloned the repository and want to get the latest changes:
+The exact files and folders may change as the project develops.
 
-git pull
+---
 
-Then open the project in Xcode and build it again.
+# 🛠️ Technology
 
-🤝 Contributing
+YT Downloader is a native macOS application developed using Apple's development tools.
+
+### Technologies Used
+
+- Swift
+- SwiftUI
+- Xcode
+- macOS
+
+The application uses a graphical user interface rather than requiring users to interact with command-line downloader tools directly.
+
+---
+
+# 📌 Project Status
+
+YT Downloader is currently an independent personal project.
+
+The project is actively maintained and may receive new features, improvements, and bug fixes in the future.
+
+Possible future improvements may include:
+
+- Pre-built application releases
+- Improved download management
+- Additional format options
+- More subtitle options
+- Improved error handling
+- Additional download controls
+- UI improvements
+- Better playlist management
+
+---
+
+# 🤝 Contributing
 
 This project is primarily maintained by the author.
 
-Suggestions, bug reports, and feedback are welcome.
+Suggestions, bug reports, and feature requests are welcome.
 
-If you find a bug or have an idea for improving YT Downloader, you can open a GitHub Issue.
+If you discover a problem or have an idea for improving the application, you can open an issue in the GitHub repository.
 
-However, the source code and project remain under the ownership and usage restrictions described in the LICENSE file.
+Pull requests may be reviewed by the project owner before being accepted.
 
-Unauthorized modification, redistribution, or publication of modified versions is not permitted.
+---
 
-🐛 Reporting Bugs
+# 🔒 License
 
-When reporting a bug, please provide as much information as possible.
+This project is **not currently licensed for modification or redistribution**.
 
-Useful information includes:
+All rights are reserved by the author unless explicit permission is granted.
 
-macOS version
-Application version
-Steps to reproduce the issue
-Expected behavior
-Actual behavior
-Error message
-Screenshot if applicable
+You may view the source code for learning and reference purposes, but you may not modify, redistribute, publish, sell, or distribute modified versions of this project without explicit permission from the author.
 
-Example:
+A formal license may be added in the future.
 
-macOS:
-Application Version:
+---
 
-Steps:
-1. Open YT Downloader
-2. Paste URL
-3. Select Playlist
-4. Click Download
+# ⚠️ Disclaimer
 
-Expected:
-Playlist should download.
+YT Downloader is intended for downloading content that you are legally allowed to download.
 
-Actual:
-Download stops after the first video.
-💡 Feature Requests
+Users are responsible for complying with:
 
-If you have an idea for a new feature, you can open an issue.
+- YouTube's Terms of Service
+- Copyright laws
+- Intellectual property laws
+- Other applicable laws and regulations
 
-Some useful information to include:
+Do not use this application to download, reproduce, or distribute copyrighted content without the appropriate permission or legal right to do so.
 
-Feature name
-What the feature should do
-Why it would be useful
-Example of how you would use it
-🚀 Future Improvements
+The author is not responsible for misuse of the application.
 
-Possible future improvements include:
+---
 
- Download queue
- Pause and resume downloads
- Multiple simultaneous downloads
- Download history
- Drag-and-drop URL support
- Improved playlist management
- More video quality options
- More audio options
- Better filename management
- Improved error handling
- Improved progress information
- Automatic update support
- Signed macOS application
- Apple notarization
- .dmg installer
- Easier one-click installation
- More customization options
-⚖️ Disclaimer
+# 👨‍💻 Author
 
-This project is intended for downloading content that you are legally allowed to download.
-
-Downloading content from YouTube may be subject to:
-
-YouTube's Terms of Service
-Copyright laws
-Local laws and regulations
-Rights belonging to the content creator
-
-Users are responsible for ensuring that they have the necessary rights or permissions to download and use any content.
-
-Only download content that you are legally permitted to download.
-
-The developer does not encourage copyright infringement or unauthorized distribution of copyrighted material.
-
-🔒 License and Copyright
-
-Copyright © 2026 CaptJackSparrow21
-
-All rights reserved.
-
-This project and its source code are proprietary.
-
-The source code is publicly available on GitHub for viewing and reference purposes, but public availability does not grant permission to modify, redistribute, republish, sublicense, sell, or create derivative works from the source code or application.
-
-You may:
-View the source code.
-Download the project for personal reference.
-Build the application for personal use, subject to the applicable terms.
-You may not:
-Modify and redistribute the project.
-Publish modified versions.
-Redistribute the source code as your own.
-Sell the source code or application.
-Create and distribute derivative versions.
-Remove copyright or ownership notices.
-Re-upload the project to another repository as your own.
-
-Any permission outside these terms must be obtained from the copyright holder.
-
-See the LICENSE file in this repository for the complete terms.
-
-👨‍💻 Author
-
-Created by CaptJackSparrow21
+Created by **CaptJackSparrow21**
 
 GitHub:
 
 https://github.com/CaptJackSparrow21
 
-⭐ Support the Project
+---
 
-If you find YT Downloader useful, you can support the project by:
+# 📦 Project Repository
 
-⭐ Starring the repository
-🐛 Reporting bugs
-💡 Suggesting features
-📢 Sharing the project
-
-Please do not redistribute or modify the project without permission.
-
-📌 Project Status
-
-Active Development
-
-YT Downloader is currently being developed as a personal project.
-
-Features and behavior may change as development continues.
-
-🔗 Project Repository
-
-The complete project repository is available on GitHub:
+The complete project is available on GitHub:
 
 https://github.com/CaptJackSparrow21/Projects
+
+Project location inside the repository:
+
+```text
+Projects
+└── Just for Fun
+    └── YT Downloader
+```
+
+---
+
+# ⭐ Support
+
+If you find this project useful, you can:
+
+- ⭐ Star the repository
+- 🐛 Report bugs
+- 💡 Suggest improvements
+- 📢 Share the project
+- 💻 Explore the source code
+
+Thank you for checking out YT Downloader!

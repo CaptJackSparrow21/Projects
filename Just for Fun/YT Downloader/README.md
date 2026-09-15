@@ -90,7 +90,7 @@ A pre-built `.app` or `.dmg` release may be provided through the GitHub Releases
 
 Once a release is available, users will be able to download the application without opening Xcode.
 
-> Pre-built releases are not currently available.
+[https://github.com/CaptJackSparrow21/Projects/releases/tag/YT_Downloader_v1.0.0]
 
 ---
 
